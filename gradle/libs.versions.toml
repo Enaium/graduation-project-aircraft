@@ -1,0 +1,24 @@
+[versions]
+javafxplugin = "0.1.0"
+manifold = "2024.1.14"
+annotations = "24.1.0"
+junit = "5.10.2"
+log4j = "2.23.1"
+
+[libraries]
+manifold-ext = { module = "systems.manifold:manifold-ext-rt", version.ref = "manifold" }
+manifold-ext-apt = { module = "systems.manifold:manifold-ext", version.ref = "manifold" }
+manifold-props = { module = "systems.manifold:manifold-props-rt", version.ref = "manifold" }
+manifold-props-apt = { module = "systems.manifold:manifold-props", version.ref = "manifold" }
+annotations = { module = "org.jetbrains:annotations", version.ref = "annotations" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
+
+[bundles]
+manifold = ["manifold-ext", "manifold-props"]
+manifold-apt = ["manifold-ext-apt", "manifold-props-apt"]
+
+[plugins]
+javafxplugin = { id = "org.openjfx.javafxplugin", version.ref = "javafxplugin" }
